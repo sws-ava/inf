@@ -1,5 +1,6 @@
 <?php
 
+use App\Services\Localization\LocalizationService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,13 +15,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('verified');
+
+
+Route::group(
+    [
+        'prefix' => LocalizationService::locale(),
+        'middleware' => 'setLocale',
+    ],
+    function () {
+
+
+        Route::get('/', function () {
+            return view('welcome');
+        });
+
+
+
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->middleware('verified');
+    }
+);
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
