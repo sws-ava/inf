@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'dashboard' => 'DASHBOARD',
+    '1' => 'DASHBOARD',
 ];
