@@ -15,8 +15,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body class="font-sans antialiased">
@@ -33,17 +31,15 @@
         <!-- Page Content -->
         <main>
 
+            <div id="app"></div>
 
-            <div id="root"></div>
 
 
             {{ $slot }}
         </main>
     </div>
 
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="/js/react.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
