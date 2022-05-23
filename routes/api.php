@@ -24,4 +24,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/showReferals', [App\Http\Controllers\api\MainController::class, 'getReferals']);
+    Route::get('/getLang', [App\Http\Controllers\api\MainController::class, 'getLang']);
 });
