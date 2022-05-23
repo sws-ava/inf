@@ -5183,13 +5183,6 @@ function Dashboard() {
       setReferals = _useState2[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    // const fetchRegions = async () => {
-    //     const result = await axios(
-    //         Api.apiUrl+'getregions',
-    //     );
-    // 	setRegionsArr(result.data.data)
-    // };
-    // fetchRegions();
     var fetchReferals = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var response;
@@ -5217,10 +5210,7 @@ function Dashboard() {
       };
     }();
 
-    fetchReferals(); // const fetchReferals =  async  = () => {
-    //     const response = await axios.get('/api/showReferals')
-    //     setReferals(response.data);
-    // }fetchRegions()
+    fetchReferals();
   }, []);
   var referalsArr = referals.map(function (referal, index) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {

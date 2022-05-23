@@ -13,13 +13,7 @@ function Dashboard() {
 
     useEffect(() => {
 
-        // const fetchRegions = async () => {
-        //     const result = await axios(
-        //         Api.apiUrl+'getregions',
-        //     );
-		// 	setRegionsArr(result.data.data)
-        // };
-        // fetchRegions();
+
 
         const fetchReferals = async () => {
             const response = await axios(
@@ -30,11 +24,6 @@ function Dashboard() {
         fetchReferals();
 
 
-
-        // const fetchReferals =  async  = () => {
-        //     const response = await axios.get('/api/showReferals')
-        //     setReferals(response.data);
-        // }fetchRegions()
 
     }, []);
 
