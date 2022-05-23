@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
+
     public function getReferals(Request $request)
     {
         $referals = DB::table('referals')->where('refovod', $request->user()->id)->select('referal')->get();
